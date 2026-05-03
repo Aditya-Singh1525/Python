@@ -7,7 +7,7 @@ pygame.init()
 # Fallback font in case pygame.font fails to initialize
 font = None
 try:
-    if hasattr(pygame, 'font') and pygame.font.get_init():
+    if hasattr(pygame, "font") and pygame.font.get_init():
         font = pygame.font.SysFont("Comic Sans MS", 20)
 except (ImportError, NotImplementedError, AttributeError):
     font = None
@@ -15,7 +15,7 @@ except (ImportError, NotImplementedError, AttributeError):
 
 def play_music():
     try:
-        if hasattr(pygame, 'mixer') and pygame.mixer.get_init():
+        if hasattr(pygame, "mixer") and pygame.mixer.get_init():
             music = "SpaceBot/bg_music.mp3"
             pygame.mixer.music.load(music)
             pygame.mixer.music.play(-1)
@@ -45,7 +45,7 @@ player_y = 225
 y_change = 0
 jump_height = 12
 gravity = 0.9
-obstacles = [400, 700, 1000, 1300, 1600]
+obstacles = [1200, 1500, 1800, 2100, 2400]
 generate_places = True
 y_positions = []
 speed = 5
@@ -155,7 +155,7 @@ while running:
                 player_x = 225
                 y_change = 0
                 generate_places = True
-                obstacles = [400, 700, 1000, 1300, 1600]
+                obstacles = [900, 1200, 1500, 1800, 2100]
                 generate_places = True
                 y_positions = []
                 score = 0
